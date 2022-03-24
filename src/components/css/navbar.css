@@ -1,0 +1,102 @@
+.navb{
+    display: flex;
+    background-color: #161b22;
+    overflow: hidden;
+}
+.navb a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navb a:hover{
+    color: grey;
+}
+.navb .icon1{
+    display: none;
+}
+#logo{
+}
+
+
+.element{
+    display: flex;
+    float: right;
+}
+
+.btnmine{
+    background-color: rgb(255, 0, 0);
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: beige;
+
+}
+
+@media screen and (max-width: 600px) {
+    .navb a:not(:first-child){display: none;}
+    .navb a.icon1{
+        font-size: large;
+        float: right;
+        display: block;
+    }
+}
+
+.navbresponsive{
+    height: 100%; /* 100% Full-height */
+    width: 250px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(65, 65, 65); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding: 3em;
+}
+.navbresponsive a{
+    padding: 0.5em;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.navbresponsive h1{
+    text-align: center;
+}
+.navbresponsive{
+    color: #f1f1f1;
+}
+
+.navbresponsive .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbresponsive .icon1{
+    display: none;
+}
+@media screen and (max-height: 450px) {
+    .navb {padding-top: 15px;}
+    .navb a {font-size: 18px;}
+}
+
+@keyframes pron {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
