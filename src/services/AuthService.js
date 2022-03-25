@@ -46,11 +46,12 @@ export default {
         })
             .then(res => {
                 if (res.status !== 401)
-                    return res.json().then(data => data)
+                    return res.json().then(data=>data);
                 else
                     return {
                         isAuthenticated: false,
                         user: {
+                            id: "",
                             username: "",
                             regId: ""
                         }

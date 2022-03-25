@@ -1,11 +1,14 @@
 import React from "react";
 import "./css/footer.css";
+import Postsform from "./Postsform";
 
 const Footer = ()=>{
+
+
     return (
         <div className="footer">
-            <p>This is my footer how its look like</p>
-            
+            <Postsform/>
+            This is my footer
         </div>
     )
 }

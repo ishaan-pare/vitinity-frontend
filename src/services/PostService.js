@@ -9,7 +9,7 @@ export default {
         })
             .then(res => {
                 if (res.status !== 401) {
-                    return res.json();
+                    return res.json().then(data=>data);
                 }
                 else {
                     return {
@@ -28,7 +28,8 @@ export default {
             body: JSON.stringify(post),
             headers: {
                 'Content-Type': "application/json"
-            }
+            },
+            credentials: 'include'
         })
             .then(res => {
                 if (res.status !== 401) {

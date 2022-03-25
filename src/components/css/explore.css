@@ -3,9 +3,42 @@
     margin-top: 2%;
     width: 80%;
     padding: 20px;
-    background: #3A3845;
+    background: #161b22;
     border-radius: 5px;
     border-top: 5px solid #711A75;
     color: white;
+    margin-bottom: 10%;
+    box-shadow: 5px 5px 10px#161b22;
+}
+
+.explore .post{
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 2em;
+    width: 80%;
+    background-color: #1c2127;
+}
+
+.explore .post .heading{
+    color: #D49B54;
+    font-size: 20px;
+}
+.explore .post .subheading{
+    color: #D49B54;
+    font-size: 18px;
+}
+.explore .post .body{
+    font-size: 18px;
+}
+
+.explore .post .foot{
+    color: #C74B50;
+}
+
+.explore .head-explore{
+    display: flex;
+    justify-content: center;
+    color: #D49B54;
+    font-size: larger;
 
 }

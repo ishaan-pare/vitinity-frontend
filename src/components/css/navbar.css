@@ -19,8 +19,6 @@
 .navb .icon1{
     display: none;
 }
-#logo{
-}
 
 
 .element{
@@ -29,7 +27,7 @@
 }
 
 .btnmine{
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 70, 70);
     border: none;
     border-radius: 5px;
     width: fit-content;
@@ -37,7 +35,11 @@
     margin-top: 10px;
     margin-right: 10px;
     color: beige;
+    font-size: larger;
+}
 
+.btnmine:hover{
+    background-color: rgb(255, 0, 0);
 }
 
 @media screen and (max-width: 600px) {

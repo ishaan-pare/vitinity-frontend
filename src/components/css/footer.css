@@ -2,9 +2,9 @@
     margin-top: 1rem;
     padding: 1rem;
     background-color: #180A0A;
-    position: fixed;
     bottom: 0;
+    position: fixed;
     left: 0;
     width: 100%;
     color: white;
-  }
+}
