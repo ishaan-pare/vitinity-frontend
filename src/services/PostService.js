@@ -9,7 +9,7 @@ export default {
         })
             .then(res => {
                 if (res.status !== 401) {
-                    return res.json().then(data=>data);
+                    return res.json().then(data => data);
                 }
                 else {
                     return {
@@ -46,5 +46,28 @@ export default {
                 }
 
             })
+    },
+
+    deletePost: async (id) => {
+        return fetch("http://localhost:8000/api/post/" + id, {
+            method: "delete",
+            headers: {
+                'Content-Type': "application/json"
+            },
+            credentials: 'include'
+        }).then(res => {
+            if (res.status !== 401) {
+                return res.json().then(data => data);
+            }
+            else {
+                return {
+                    message: {
+                        msgBody: "Unauthorized",
+                        msgError: true
+                    }
+                }
+
+            }
+        })
     }
 }

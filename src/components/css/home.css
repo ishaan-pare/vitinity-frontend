@@ -1,0 +1,14 @@
+.home{
+    display: flex;
+    justify-content: center;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    padding: 10em;
+    border: solid;
+
+
+}
+

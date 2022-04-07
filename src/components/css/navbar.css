@@ -1,16 +1,17 @@
 .navb{
     display: flex;
-    background-color: #161b22;
+    background: transparent;
     overflow: hidden;
 }
 .navb a{
     float: left;
     display: block;
-    color: white;
+    color: #11052C;
     text-align: center;
     padding: 10px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .navb a:hover{

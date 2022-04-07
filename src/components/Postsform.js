@@ -7,12 +7,15 @@ import "./css/postsform.css";
 
 const Postsform = () => {
     const [post, setPost] = useState({ creator: "", registerId: "", body: "" });
-    const { user, setUser, isAuthenticated, setIsAutjenticated } = useContext(AuthContext);
+    const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
     const location = useLocation();
 
     const onSubmit = (e)=>{
         e.preventDefault();
         PostService.uploadPost(post);
+
+        let bod = "";
+        setPost({...bod});
     }
     const onChange = (e)=>{
         e.preventDefault();

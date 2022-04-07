@@ -9,7 +9,9 @@ const Register = (props) => {
     const [user, setUser] = useState({ username: "", regId: "", password: "" });
     const [message, setMessage] = useState(null);
     const authContext = useContext(AuthContext);
+    const [code, setCode] = useState(0);
     let timerId = useRef(null);
+    const myuser = require('D:/pmmp/vitinity-client/src/dependencies/users.json')
 
 
     const navigate = useNavigate();
@@ -25,12 +27,26 @@ const Register = (props) => {
     const onSubmit = e => {
         e.preventDefault();
 
-        AuthService.register(user)
+        if (!myuser[user["regId"]] || myuser[user["regId"]] !== user["username"]) {
+            setMessage("You are not from our university");
+            
+            setTimeout(()=>{
+                setMessage("");
+            },2000);
+        }
+        else if (user["password"].length < 8) {
+            setMessage("Password is too short");
+            setTimeout(()=>{
+                setMessage("");
+            },2000);
+        }
+        else
+            AuthService.register(user)
             .then(data => {
 
                 const { message } = data;
-                setMessage(message);
-
+                setMessage("Successfully registered");
+                setCode(1);
                 resetForm();
 
                 if (!message.msgError) {
@@ -50,6 +66,7 @@ const Register = (props) => {
                 <input type="password" onChange={onChange} name="password" placeholder="Enter password"/>
                 <button onSubmit={onSubmit}>Register</button>
             </form>
+            <Message text={message} msgcode={code}/>
         </div>
     )
 }

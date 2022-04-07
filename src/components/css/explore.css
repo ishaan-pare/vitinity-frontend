@@ -3,28 +3,33 @@
     margin-top: 2%;
     width: 80%;
     padding: 20px;
-    background: #161b22;
+    background: #F7F5F2;
     border-radius: 5px;
-    border-top: 5px solid #711A75;
-    color: white;
+    border-top: 5px solid #252243;
+    color: #252243;
     margin-bottom: 10%;
-    box-shadow: 5px 5px 10px#161b22;
+    box-shadow: 5px 5px 10px#252243;
 }
-
+.explore .head-explore{
+    color: #252243;
+}
 .explore .post{
     margin: auto;
     margin-bottom: 10px;
     padding: 2em;
     width: 80%;
-    background-color: #1c2127;
+    background-color: #fff;
+    border: solid 2px #252243;
+    box-shadow: 3px 3px 10px #252243;
 }
 
 .explore .post .heading{
-    color: #D49B54;
+    color: #3A3845;
     font-size: 20px;
+    font-weight: bold;
 }
 .explore .post .subheading{
-    color: #D49B54;
+    color: #252243;
     font-size: 18px;
 }
 .explore .post .body{
@@ -32,13 +37,28 @@
 }
 
 .explore .post .foot{
-    color: #C74B50;
+    color: #252243;
+    font-weight: bold;
+    color: green;
 }
 
 .explore .head-explore{
     display: flex;
     justify-content: center;
-    color: #D49B54;
+    color: #252243;
     font-size: larger;
 
+}
+
+.explore .del{
+    float: right;
+    width: 15px;
+    height: 15px;
+}
+
+.explore .del :hover{
+    background-color:#FDF0F6;
+}
+.explore .del AiFillDelete:hover{
+    pointer-events: stroke;
 }

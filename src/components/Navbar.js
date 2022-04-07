@@ -22,7 +22,7 @@ const Navbar = (props) => {
         return (
             <>
                 <div className="ele-left">
-                <a id="logo" href='/'><span style={{ "color": "white", "fontSize": "18px", "padding": "3px", "backgroundColor": "#711A75", "borderRadius": "12px" }}>VIT Community</span></a>
+                    <a id="logo" href='/'><span style={{ "color": "white", "fontSize": "18px", "padding": "3px", "border": "solid 3px #252243", "borderRadius": "12px", "color": "blue" }}>VIT Community</span></a>
                 </div>
                 <div className="ele-center">
                     <a className="actve" href='/'> Home</a>
@@ -31,9 +31,9 @@ const Navbar = (props) => {
                 </div>
                 <div className="ele-right">
                     <a href="/">AboutUs</a>
-                    <a href="/">Contribute</a> 
+                    <a href="/">Contribute</a>
                 </div>
-                
+
             </>
         );
     }
@@ -41,7 +41,7 @@ const Navbar = (props) => {
     const authenticatedNavbar = () => {
         return (
             <>
-                <a id="logo" href='/'><span style={{ "color": "white", "fontSize": "18px", "padding": "3px", "backgroundColor": "#711A75", "borderRadius": "12px" }}>VIT Community</span></a>
+                <a id="logo" href='/'><span style={{ "color": "white", "fontSize": "18px", "padding": "3px", "border": "solid 3px #252243", "borderRadius": "12px", "color": "blue" }}>VIT Community</span></a>
                 <div className="element">
                     <a className="actve" href='/'> Home</a>
                     <a href='/explore'>Explore</a>
@@ -50,6 +50,7 @@ const Navbar = (props) => {
                         className="btnmine"
                         onClick={onClickLogoutHandler}
                     >Logout</button>
+
                 </div>
 
             </>
@@ -57,11 +58,15 @@ const Navbar = (props) => {
     }
 
     return (
-        <div className="navb">
-            {
-                !isAuthenticated ? unAuthenticatedNavbar() : authenticatedNavbar()
-            }
-        </div>
+        <>
+            <div className="navb">
+                {
+                    !isAuthenticated ? unAuthenticatedNavbar() : authenticatedNavbar()
+                }
+
+            </div>
+            <hr />
+        </>
     )
 }
 
