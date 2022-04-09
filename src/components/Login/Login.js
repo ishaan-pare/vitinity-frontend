@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
-import AuthService from '../services/AuthService';
-import Message from './Message';
+import AuthService from '../../services/AuthService';
+import Message from '../Message/Message';
 import { useNavigate } from "react-router";
-import { AuthContext } from '../context/AuthContext';
-import "./css/login.css";
+import { AuthContext } from '../../context/AuthContext';
+import "./login.css";
 
 const Login = (props) => {
     const disp = "Please fill the full form correctly"

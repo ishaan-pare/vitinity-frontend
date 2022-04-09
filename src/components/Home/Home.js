@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
-import AuthContext from "../context/AuthContext";
-import './css/home.css';
+import AuthContext from "../../context/AuthContext";
+import './home.css';
 
 const First = ()=>{
     return(

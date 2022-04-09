@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import {AiFillDelete} from 'react-icons/ai';
-import {AuthContext} from "../context/AuthContext";
-import PostService from "../services/PostService.js";
-import "./css/explore.css";
+import {AuthContext} from "../../context/AuthContext";
+import PostService from "../../services/PostService.js";
+import "./explore.css";
 
 const Explore = ()=>{
 

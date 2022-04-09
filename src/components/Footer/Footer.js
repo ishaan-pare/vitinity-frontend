@@ -1,8 +1,9 @@
 import React from "react";
-import "./css/footer.css";
-import Postsform from "./Postsform";
+import "./footer.css";
+import Postsform from "../Postsform/Postsform";
 import {AiFillGithub,AiOutlineLinkedin, AiFillFacebook} from 'react-icons/ai';
 import {FaTelegramPlane} from 'react-icons/fa';
+
 const Footer = ()=>{
 
 

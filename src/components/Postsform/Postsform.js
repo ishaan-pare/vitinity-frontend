@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
-import AuthService from "../services/AuthService";
-import PostService from "../services/PostService";
-import "./css/postsform.css";
+import { AuthContext } from "../../context/AuthContext";
+import AuthService from "../../services/AuthService";
+import PostService from "../../services/PostService";
+import "./postsform.css";
 
 const Postsform = () => {
     const [post, setPost] = useState({ creator: "", registerId: "", body: "" });

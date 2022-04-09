@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import AuthService from '../services/AuthService';
-import { AuthContext } from '../context/AuthContext';
+import AuthService from '../../services/AuthService';
+import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from "react-router";
+import './navbar.css';
 
 const Navbar = (props) => {
     const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
