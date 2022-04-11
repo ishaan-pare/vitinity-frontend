@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import {AiFillDelete} from 'react-icons/ai';
 import {AuthContext} from "../../context/AuthContext";
+import {BiUpvote, BiDownvote} from 'react-icons/bi';
 import PostService from "../../services/PostService.js";
 import "./explore.css";
 
@@ -15,10 +16,31 @@ const Explore = ()=>{
     useEffect(()=>{
         
         PostService.getPosts().then((res)=>{
-            setPosts(res);
+            setPosts(res);     
         });
     });
-  
+
+    const handleUpvote = async (id,lis)=>{
+        console.log(lis);
+        console.log(authContext.user["_id"]);
+        if (lis.indexOf(authContext.user["_id"]) === -1)
+            await PostService.upVote(id);
+        else
+            alert("Already voted")
+        document.location.reload();
+        
+    }
+    const handledownvote = async (id, lis)=>{
+        console.log(lis);
+        console.log(authContext.user["_id"]);
+        if (lis.indexOf(authContext.user["_id"]) === -1)
+            await PostService.downVote(id);
+        else
+            alert("Already voted")
+
+        document.location.reload();
+        
+    }
     return (
         <div className="explore">
             <div className="head-explore"><h1>Feeds</h1></div>
@@ -43,6 +65,8 @@ const Explore = ()=>{
                                 {getMyDate(data["createdAt"])}
                             </div>
                             <div className="del"> 
+                                <BiUpvote onClick={()=>handleUpvote(data["_id"], data["voted"])} size={"25px"} color="green"/><span>{data["likes"]}</span><BiDownvote onClick={()=>handledownvote(data["_id"], data["voted"])} size={"25px"} color="red"/>
+                                <div style={{"width": "88%"}}></div>
                                 {authContext.user["regId"] == data["registerId"]?<AiFillDelete id="delicon" onClick={()=>PostService.deletePost(data["_id"])} color="red" size={"20px"}/>:<></>}                                
                             </div>
                         </div>

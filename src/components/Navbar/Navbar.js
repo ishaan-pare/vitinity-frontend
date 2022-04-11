@@ -4,6 +4,14 @@ import AuthService from '../../services/AuthService';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from "react-router";
 import './navbar.css';
+import {AiOutlineHome, AiOutlineNotification} from 'react-icons/ai';
+import {GrLogin,GrUserAdmin} from 'react-icons/gr';
+import {BsPersonCheck, BsGithub, BsFillPersonFill} from 'react-icons/bs';
+import {BiCommand} from 'react-icons/bi';
+import {SiAzuredataexplorer} from 'react-icons/si';
+import {HiAcademicCap} from 'react-icons/hi';
+import {ImProfile} from 'react-icons/im';
+
 
 const Navbar = (props) => {
     const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
@@ -22,19 +30,17 @@ const Navbar = (props) => {
     const unAuthenticatedNavbar = () => {
         return (
             <>
-                <div className="ele-left">
-                    <a id="logo" href='/'><span style={{ "color": "white", "fontSize": "18px", "padding": "3px", "border": "solid 3px #252243", "borderRadius": "12px", "color": "blue" }}>VIT Community</span></a>
-                </div>
-                <div className="ele-center">
-                    <a className="actve" href='/'> Home</a>
-                    <a href='/login'>Login</a>
-                    <a href='/register'>Register</a>
-                </div>
-                <div className="ele-right">
-                    <a href="/">AboutUs</a>
-                    <a href="/">Contribute</a>
-                </div>
-
+                <nav>
+                    <div className="menu">
+                        <a className="active" href="/"><AiOutlineHome size={"15px"}/> Home</a>
+                        <a href="/login"><GrLogin size={"15px"}/> Login</a>
+                        <a href="/register"><BsPersonCheck size={"15px"}/> SignUp</a>
+                        <a href="/aboutus"><BiCommand size={"15px"} /> AboutUs</a>
+                        <a href="/" style={{"backgroundColor": "purple", "color": "whitesmoke"}}><BsGithub size={"15px"}/> Github</a>
+                        <div class="animation start-home"></div>
+                    </div>
+                    
+                </nav>
             </>
         );
     }
@@ -42,32 +48,37 @@ const Navbar = (props) => {
     const authenticatedNavbar = () => {
         return (
             <>
-                <a id="logo" href='/'><span style={{ "color": "white", "fontSize": "18px", "padding": "3px", "border": "solid 3px #252243", "borderRadius": "12px", "color": "blue" }}>VIT Community</span></a>
-                <div className="element">
-                    <a className="actve" href='/'> Home</a>
-                    <a href='/explore'>Explore</a>
-                    <a href='/notices'>Notices</a>
+            <nav className="authnav">
+                {/* todo */}
+                <div className="menu">
+                    <a href="/"><AiOutlineHome size={"15px"}/> Home</a>
+                    <a className="actve" href='/explore'><SiAzuredataexplorer size={"15px"}/> Explore</a>
+                    <a href='/notices'><AiOutlineNotification size={"18px"}/> Notices</a>
+                    <a href='/notices'><HiAcademicCap size={"18px"}/>Academics</a>
+                    {
+                        user["isAdmin"]?<a href="/admin"><GrUserAdmin size={"15px"}/>Admin</a>:<></>
+                    }
+                    <div class="animation start-home"></div>
+                </div>
+            </nav>
+            <div className="user">
+                    <a><BsFillPersonFill size={"50px"}/></a>
                     <button type="button"
                         className="btnmine"
                         onClick={onClickLogoutHandler}
-                    >Logout</button>
-
-                </div>
-
+                    >Logout</button> 
+            </div>
             </>
         )
     }
 
     return (
-        <>
-            <div className="navb">
+        <div className="topnav">
                 {
                     !isAuthenticated ? unAuthenticatedNavbar() : authenticatedNavbar()
                 }
 
-            </div>
-            <hr />
-        </>
+        </div>
     )
 }
 

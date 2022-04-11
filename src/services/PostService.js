@@ -69,5 +69,47 @@ export default {
 
             }
         })
+    },
+    upVote: async (id)=>{
+        return fetch("http://localhost:8000/api/post/upvote/"+id,{
+            method: "put",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include'
+        }).then(res=>{
+            if (res.status !==500) {
+                return res.json().then(data=>data);
+            }
+            else {
+                return {
+                    message: {
+                        msgBody: "UnAuthorized",
+                        msgError: true
+                    }
+                }
+            }
+        })
+    },
+    downVote: async (id)=>{
+        return fetch("http://localhost:8000/api/post/downvote/"+id,{
+            method: "put",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include'
+        }).then(res=>{
+            if (res.status !==500) {
+                return res.json().then(data=>data);
+            }
+            else {
+                return {
+                    message: {
+                        msgBody: "UnAuthorized",
+                        msgError: true
+                    }
+                }
+            }
+        })
     }
 }

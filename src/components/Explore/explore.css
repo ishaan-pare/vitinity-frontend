@@ -1,26 +1,22 @@
 .explore {
     margin: auto;
     margin-top: 2%;
-    width: 80%;
+    width: 70%;
     padding: 20px;
-    background: #F7F5F2;
+    background: whitesmoke;
     border-radius: 5px;
-    border-top: 5px solid #252243;
     color: #252243;
     margin-bottom: 10%;
-    box-shadow: 5px 5px 10px #252243;
 }
 .explore .head-explore{
     color: #252243;
 }
 .explore .post{
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     padding: 2em;
     width: 80%;
-    background-color: #fff;
-    border: solid 2px #252243;
-    box-shadow: 3px 3px 10px #252243;
+    border-left: #3A3845 solid 6px;
 }
 
 .explore .post .heading{
@@ -51,9 +47,11 @@
 }
 
 .explore .del{
-    float: right;
-    width: 15px;
-    height: 15px;
+    display: flex;
+    margin-top: 30px;
+    width: 80%;
+    padding: 6px;
+    border: #3A3845 solid 1px;
 }
 
 .explore .del :hover{
@@ -62,3 +60,53 @@
 .explore .del AiFillDelete:hover{
     pointer-events: stroke;
 }
+
+
+
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.explore {
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+}
+
+.explore:before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		animation: rotate 20s linear infinite;
+}
+	
+.explore:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 5px;
+	}

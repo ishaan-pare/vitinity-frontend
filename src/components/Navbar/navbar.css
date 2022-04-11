@@ -1,105 +1,103 @@
-.navb{
+.topnav {
+  display: flex;
+}
+nav {
+    margin: 27px auto 0;
     display: flex;
-    background: transparent;
-    overflow: hidden;
-}
-.navb a{
-    float: left;
-    display: block;
-    color: #11052C;
-    text-align: center;
-    padding: 10px 16px;
+    position: relative;
+    width: max-content;
+    height: 50px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    font-size: 0;
+  }
+  nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
     text-decoration: none;
-    font-size: large;
-    font-weight: bold;
-}
-
-.navb a:hover{
-    color: grey;
-}
-.navb .icon1{
-    display: none;
-}
-
-
-.element{
-    display: flex;
-    float: right;
-}
-
-.btnmine{
-    background-color: rgb(255, 70, 70);
-    border: none;
-    border-radius: 5px;
-    width: fit-content;
-    height: fit-content;
-    margin-top: 10px;
-    margin-right: 10px;
-    color: beige;
-    font-size: larger;
-}
-
-.btnmine:hover{
-    background-color: rgb(255, 0, 0);
-}
-
-@media screen and (max-width: 600px) {
-    .navb a:not(:first-child){display: none;}
-    .navb a.icon1{
-        font-size: large;
-        float: right;
-        display: block;
-    }
-}
-
-.navbresponsive{
-    height: 100%; /* 100% Full-height */
-    width: 250px; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: rgb(65, 65, 65); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    padding: 3em;
-}
-.navbresponsive a{
-    padding: 0.5em;
-    align-items: center;
+    text-transform: uppercase;
     text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.navbresponsive h1{
-    text-align: center;
-}
-.navbresponsive{
-    color: #f1f1f1;
-}
-
-.navbresponsive .closebtn{
+    color: black;
+    cursor: pointer;
+  }
+  nav .animation {
     position: absolute;
+    height: 100%;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  a:nth-child(1) {
+    width: 100px;
+  }
+  a:nth-child(2) {
+    width: 110px;
+  }
+  a:nth-child(3) {
+    width: 100px;
+  }
+  a:nth-child(4) {
+    width: 130px;
+  }
+  a:nth-child(5) {
+    width: 120px;
+    background-color: #e74c3c;
+    border-radius: 8px;
+  }
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #e74c3c;
+  }
+  nav .start-blog, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+    background-color: #3498db;
+  }
+  nav .start-portefolio, a:nth-child(4):hover~.animation {
+    width: 135px;
+    left: 310px;
+    background-color: #9b59b6;
+  }
 
-.navbresponsive .icon1{
-    display: none;
-}
-@media screen and (max-height: 450px) {
-    .navb {padding-top: 15px;}
-    .navb a {font-size: 18px;}
-}
 
-@keyframes pron {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
+.user{
+  
+  margin-top: 27px;
+  right: 8px;
+  display: flex;
+  position: absolute;
+  width: max-content;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 0;
 }
+.user button {
+  margin-top: 10px;
+  color: whitesmoke;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  
 
+}
+.user button:hover{
+  background-color: #e74c3c;
+  cursor: pointer;
+}
+.user a{
+  width: max-content;
+  color: whitesmoke;
+}

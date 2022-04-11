@@ -6,6 +6,8 @@ import Register from './components/Register/Register';
 import Home from './components/Home/Home';
 import Footer from "./components/Footer/Footer";
 import Postsform from "./components/Postsform/Postsform";
+import Admin from "./components/Admin/Admin";
+import ScrollButton from "./components/Scrollup/ScrollupButton";
 
 function App() {
   return (
@@ -19,9 +21,13 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/explore" element={<Explore/>}/>
+          <Route path="/admin" element={<Admin/>}/>
         </Routes>
         <Footer/>
       </Router>
+      <div>
+        <ScrollButton/>
+      </div>
     </div>
   );
 }

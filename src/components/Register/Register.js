@@ -27,6 +27,7 @@ const Register = (props) => {
     const onSubmit = e => {
         e.preventDefault();
 
+        //change regid->username and username->regid for login via regid
         if (!myuser[user["regId"]] || myuser[user["regId"]] !== user["username"]) {
             setMessage("You are not from our university");
             
@@ -61,6 +62,7 @@ const Register = (props) => {
         <div className="register-block">
             <h1>Register</h1>
             <form onSubmit={onSubmit}>
+                {/* convert regid->username and username->regid for login via regid */}
                 <input type="text" onChange={onChange} name="regId" placeholder="Enter registerId"/>
                 <input type="text" onChange={onChange} name="username" placeholder="Enter username"/>
                 <input type="password" onChange={onChange} name="password" placeholder="Enter password"/>
