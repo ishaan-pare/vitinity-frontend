@@ -1,0 +1,26 @@
+.show {
+    position: fixed;
+    width: 100%;
+    left: 90%;
+    bottom: 120px;
+    height: 20px;
+    font-size: 3rem;
+    z-index: 1;
+}
+.show button{
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background-color: orangered;
+    border-radius: 10em;
+
+
+
+
+}
+
+.show button:hover{
+    background-color: rgb(216, 107, 68);
+    cursor: pointer;
+}

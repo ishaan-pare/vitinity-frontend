@@ -21,24 +21,24 @@ const Explore = ()=>{
     });
 
     const handleUpvote = async (id,lis)=>{
-        console.log(lis);
-        console.log(authContext.user["_id"]);
-        if (lis.indexOf(authContext.user["_id"]) === -1)
+
+        if (lis.indexOf(authContext.user["_id"]) === -1) {
             await PostService.upVote(id);
+            document.location.reload();
+        }
         else
             alert("Already voted")
-        document.location.reload();
         
     }
     const handledownvote = async (id, lis)=>{
-        console.log(lis);
-        console.log(authContext.user["_id"]);
-        if (lis.indexOf(authContext.user["_id"]) === -1)
+
+        if (lis.indexOf(authContext.user["_id"]) === -1) {
             await PostService.downVote(id);
+            document.location.reload();
+        }
         else
             alert("Already voted")
 
-        document.location.reload();
         
     }
     return (
