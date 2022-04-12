@@ -16,6 +16,8 @@ function App() {
   const [isvis, setIsvis] = useState(false);
 
   const handleonclick = ()=>{
+    console.log(window.location.href)
+
     if (isvis)
       setIsvis(false)
     else
@@ -40,9 +42,14 @@ function App() {
       <div>
         <ScrollButton/>
       </div>
-      <div className="show">
+      {
+        window.location.href.substring(window.location.href.lastIndexOf('/')+1) === "explore"?<div className="show">
         <button onClick={handleonclick}><BsSignpostFill size={"20px"}/> New Post</button>
       </div>
+      :
+      <></>
+      }
+      
     </div>
   );
 }
