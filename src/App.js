@@ -14,6 +14,7 @@ import './app.css';
 import AuthContext from "./context/AuthContext";
 import Notices from "./components/Notices/Notices";
 import Academic from './components/Academic/Academic';
+import Aboutus from "./components/Aboutus/Aboutus";
 
 function App() {
   const [isvis, setIsvis] = useState(false);
@@ -44,6 +45,8 @@ function App() {
           <Route path="/admin" element={<Admin/>}/>
           <Route path="/notices" element={<Notices/>}/>
           <Route path="/academic" element={<Academic/>}/>
+          <Route path="/aboutus" element={<Aboutus/>}/>
+
 
 
         </Routes>

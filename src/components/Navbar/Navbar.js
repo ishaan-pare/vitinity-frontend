@@ -37,8 +37,8 @@ const Navbar = (props) => {
                         <a href="/login"><GrLogin size={"15px"}/> Login</a>
                         <a href="/register"><BsPersonCheck size={"15px"}/> SignUp</a>
                         <a href="/aboutus"><BiCommand size={"15px"} /> AboutUs</a>
-                        <a href="/" style={{"backgroundColor": "purple", "color": "whitesmoke"}}><BsGithub size={"15px"}/> Github</a>
-                        <div class="animation start-home"></div>
+                        <a href="https://github.com/ishaan-pare/vitinity-frontend.git" style={{"backgroundColor": "purple", "color": "whitesmoke"}}><BsGithub size={"15px"}/> Github</a>
+                        <div id="barhov" class="animation start-home"></div>
                     </div>
                     
                 </nav>

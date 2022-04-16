@@ -1,0 +1,22 @@
+.val1{
+    display: flex;
+    padding: 2em;
+    background-color: #1abc9c;
+    align-items: center;
+    text-align: center;
+    border-bottom-left-radius: 2em;
+}
+.leftval{
+    width: 30%;
+    float: left;
+}
+.rightval{
+    width: 70%;
+    float: right;
+    font-size: 28px;
+}
+
+#greet{
+    margin-left: 70px;
+    font-size: 18px;
+}

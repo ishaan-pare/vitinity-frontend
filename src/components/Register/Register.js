@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import AuthService from '../../services/AuthService';
 import Message from '../Message/Message';
 import { useNavigate } from "react-router";
@@ -11,7 +11,7 @@ const Register = (props) => {
     const authContext = useContext(AuthContext);
     const [code, setCode] = useState(0);
     let timerId = useRef(null);
-    const myuser = require('/home/ishaan/pmmp/github_repos/vitinity-frontend/src/dependencies/users.json')
+    const myuser = require('/home/ishaan/pmmp/vitinity-frontend/src/dependencies/users.json')
 
 
     const navigate = useNavigate();
@@ -67,6 +67,9 @@ const Register = (props) => {
                 <input type="text" onChange={onChange} name="username" placeholder="Enter username"/>
                 <input type="password" onChange={onChange} name="password" placeholder="Enter password"/>
                 <button onSubmit={onSubmit}>Register</button>
+                <div className="bottom">
+                    <a href="/login">already have an account? <span>login here</span></a>
+                </div>
             </form>
             <Message text={message} msgcode={code}/>
         </div>

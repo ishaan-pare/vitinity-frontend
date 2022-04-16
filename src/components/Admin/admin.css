@@ -1,0 +1,46 @@
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 2em;
+    font-family: 'Courier New', Courier, monospace;
+
+}   
+
+.details{
+    padding: .7em;
+    background-color: #e74c3c;
+    border-radius: 2em;
+
+}
+.details h2{
+    text-align: center;
+}
+
+.details .val {
+    padding: 2em;
+    background-color: #1abc9c;
+    align-items: center;
+    text-align: center;
+    border-bottom-left-radius: 2em;
+    font-size: 20px;
+}
+.comp{
+    display: flex;
+}
+
+.comp1{
+    padding: 2em;
+    text-align: center;
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    background-color: whitesmoke;
+    margin-left: 1px;
+}
+
+.comp1:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 45%;
+
+}

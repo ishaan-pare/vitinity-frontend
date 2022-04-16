@@ -1,7 +1,15 @@
 .home{
-    display: flex;
-    justify-content: center;
+    background-color: whitesmoke;
+    width: 80%;
+    margin: auto;
+    padding: 2em;
+    margin-top: 150px;
+    border-radius: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    height: max-content;
+
 }
+
 .first{
     display: flex;
     justify-content: center;
@@ -11,4 +19,135 @@
 
 
 }
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 2em;
 
+}
+
+.buttons button{
+    width: 170px;
+    height: 50px;
+    background-color: #399953;
+    border: none;
+    border-radius: 2em;
+    font-size: 20px;
+    margin-right: 2em;
+    
+}
+.buttons button:hover{
+    background-color: #307242;
+}
+
+#one{
+    justify-content: center;
+    font-size: 40px;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    margin-top: 10px;
+
+}
+#two{
+    background-color: #d53e33;
+    padding: 2em;
+    border-radius: 1000rem;
+    font-size: 30px;
+    display: flex;
+    margin: auto;
+    width: 60%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.word {
+  margin: auto;
+  color: white;
+  font: 700 normal 2.5em 'tahoma';
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+}
+
+
+
+
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.home {
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+}
+
+.home:before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		animation: rotate 10s linear infinite;
+}
+	
+.home:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 5px;
+	}
+
+    .show {
+        position: fixed;
+        width: 100%;
+        left: 90%;
+        bottom: 120px;
+        height: 20px;
+        font-size: 3rem;
+        z-index: 1;
+    }
+    .show button{
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background-color: orangered;
+        border-radius: 10em;
+    
+    
+    
+    
+    }
+    
+    .show button:hover{
+        background-color: rgb(216, 107, 68);
+        cursor: pointer;
+    }
+
+
+  

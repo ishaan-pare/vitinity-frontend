@@ -1,4 +1,4 @@
-.explore {
+.aboutus {
     margin: auto;
     margin-top: 2%;
     width: 70%;
@@ -8,49 +8,37 @@
     color: #252243;
     margin-bottom: 10%;
 }
-.explore .head-explore{
+.aboutus .head-aboutus{
     color: #252243;
 }
-.explore .post{
+.aboutus .post{
     margin: auto;
     margin-bottom: 50px;
     padding: 2em;
     width: 80%;
     border-left: #3A3845 solid 6px;
-    background-color: white;
-    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.2);
-}
-.post:hover{
-    margin: auto;
-    margin-bottom: 50px;
-    padding: 2em;
-    width: 80%;
-    border-left: #3A3845 solid 6px;
-    background-color: white;
-    box-shadow: 0 20px 24px 0 rgba(0,0,0,0.2);
-
 }
 
-.explore .post .heading{
+.aboutus .post .heading{
     color: #3A3845;
     font-size: 20px;
     font-weight: bold;
 }
-.explore .post .subheading{
+.aboutus .post .subheading{
     color: #252243;
     font-size: 18px;
 }
-.explore .post .body{
+.aboutus .post .body{
     font-size: 18px;
 }
 
-.explore .post .foot{
+.aboutus .post .foot{
     color: #252243;
     font-weight: bold;
     color: green;
 }
 
-.explore .head-explore{
+.aboutus .head-aboutus{
     display: flex;
     justify-content: center;
     color: #252243;
@@ -58,7 +46,7 @@
 
 }
 
-.explore .del{
+.aboutus .del{
     display: flex;
     margin-top: 30px;
     width: 80%;
@@ -66,10 +54,10 @@
     border: #3A3845 solid 1px;
 }
 
-.explore .del :hover{
+.aboutus .del :hover{
     background-color:#FDF0F6;
 }
-.explore .del AiFillDelete:hover{
+.aboutus .del AiFillDelete:hover{
     pointer-events: stroke;
 }
 
@@ -87,7 +75,7 @@
 	}
 }
 
-.explore {
+.aboutus {
 	position: relative;
 	z-index: 0;
 	border-radius: 10px;
@@ -95,7 +83,7 @@
 	padding: 2rem;
 }
 
-.explore:before {
+.aboutus:before {
 		content: '';
 		position: absolute;
 		z-index: -2;
@@ -110,8 +98,25 @@
 		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
 		animation: rotate 20s linear infinite;
 }
-	
-.explore:after {
+
+.lef{
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2em;
+}
+.righ{
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2em;
+
+    
+}
+
+.aboutus:after {
 		content: '';
 		position: absolute;
 		z-index: -1;
@@ -119,7 +124,7 @@
 		top: 6px;
 		width: calc(100% - 12px);
 		height: calc(100% - 12px);
-		background: rgb(241, 239, 239);
+		background: white;
 		border-radius: 5px;
 	}
 

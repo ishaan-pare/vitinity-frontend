@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import AuthService from '../../services/AuthService';
 import Message from '../Message/Message';
 import { useNavigate } from "react-router";
@@ -12,6 +12,7 @@ const Login = (props) => {
     const authContext = useContext(AuthContext);
     const [code,setCode] = useState(0);
 
+    
     const navigate = useNavigate();
     const onChange = e => {
         e.preventDefault();
@@ -54,7 +55,11 @@ const Login = (props) => {
                 <input type="text" onChange={onChange} name="username" placeholder="Enter username" />
                 <input type="password" onChange={onChange} name="password" placeholder="Enter password" />
                 <button onSubmit={onSubmit}>Login</button>
+                <div className="bottom">
+                    <a href="/register">not have an account? <span>register here</span></a>
+                </div>
             </form>
+            
             <Message text={message} msgcode={code}/>
         </div>
 
