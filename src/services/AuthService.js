@@ -53,7 +53,8 @@ export default {
                         user: {
                             id: "",
                             username: "",
-                            regId: ""
+                            regId: "",
+                            isAdmion: ""
                         }
                     }
             });

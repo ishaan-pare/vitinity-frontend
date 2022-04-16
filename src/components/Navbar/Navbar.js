@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import AuthService from '../../services/AuthService';
 import { AuthContext } from '../../context/AuthContext';
@@ -10,13 +10,15 @@ import {BsPersonCheck, BsGithub, BsFillPersonFill} from 'react-icons/bs';
 import {BiCommand} from 'react-icons/bi';
 import {SiAzuredataexplorer} from 'react-icons/si';
 import {HiAcademicCap} from 'react-icons/hi';
-import {ImProfile} from 'react-icons/im';
 
 
 const Navbar = (props) => {
     const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
     const navigate = useNavigate();
+
     const onClickLogoutHandler = () => {
+        navigate('/');
+
         AuthService.logout().then(data => {
             console.log(data);
             if (data.success) {
@@ -24,7 +26,6 @@ const Navbar = (props) => {
                 setUser(data.user);
                 setIsAuthenticated(false);
             }
-            navigate('/');
         });
     }
     const unAuthenticatedNavbar = () => {
@@ -54,9 +55,12 @@ const Navbar = (props) => {
                     <a href="/"><AiOutlineHome size={"15px"}/> Home</a>
                     <a className="actve" href='/explore'><SiAzuredataexplorer size={"15px"}/> Explore</a>
                     <a href='/notices'><AiOutlineNotification size={"18px"}/> Notices</a>
-                    <a href='/notices'><HiAcademicCap size={"18px"}/>Academics</a>
+                    <a href='/academic'><HiAcademicCap size={"18px"}/>Academics</a>
                     {
                         user["isAdmin"]?<a href="/admin"><GrUserAdmin size={"15px"}/>Admin</a>:<></>
+                    }
+                    {
+                        ((user["isAdmin"]==null ) && isAuthenticated)?window.location.reload():null
                     }
                     <div class="animation start-home"></div>
                 </div>

@@ -8,12 +8,16 @@ import Footer from "./components/Footer/Footer";
 import Postsform from "./components/Postsform/Postsform";
 import Admin from "./components/Admin/Admin";
 import ScrollButton from "./components/Scrollup/ScrollupButton";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {BsSignpostFill} from 'react-icons/bs';
 import './app.css';
+import AuthContext from "./context/AuthContext";
+import Notices from "./components/Notices/Notices";
+import Academic from './components/Academic/Academic';
 
 function App() {
   const [isvis, setIsvis] = useState(false);
+  const authcontext = useContext(AuthContext);
 
   const handleonclick = ()=>{
     console.log(window.location.href)
@@ -23,6 +27,8 @@ function App() {
     else
       setIsvis(true)
   }
+
+
 
   return (
     <div className="App">
@@ -36,6 +42,10 @@ function App() {
           <Route path="/register" element={<Register/>}/>
           <Route path="/explore" element={<Explore/>}/>
           <Route path="/admin" element={<Admin/>}/>
+          <Route path="/notices" element={<Notices/>}/>
+          <Route path="/academic" element={<Academic/>}/>
+
+
         </Routes>
         <Footer show = {isvis}/>
       </Router>
