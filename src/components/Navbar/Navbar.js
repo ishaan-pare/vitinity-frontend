@@ -10,6 +10,7 @@ import {BsPersonCheck, BsGithub, BsFillPersonFill} from 'react-icons/bs';
 import {BiCommand} from 'react-icons/bi';
 import {SiAzuredataexplorer} from 'react-icons/si';
 import {HiAcademicCap} from 'react-icons/hi';
+import {FaPowerOff} from 'react-icons/fa';
 
 
 const Navbar = (props) => {
@@ -66,11 +67,11 @@ const Navbar = (props) => {
                 </div>
             </nav>
             <div className="user">
-                    <a><BsFillPersonFill size={"50px"}/></a>
+                    <a><BsFillPersonFill size={"60px"}/></a>
                     <button type="button"
                         className="btnmine"
                         onClick={onClickLogoutHandler}
-                    >Logout</button> 
+                    ><FaPowerOff size={"30px"}/></button> 
             </div>
             </>
         )

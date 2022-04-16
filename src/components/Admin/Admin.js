@@ -26,7 +26,7 @@ const Admin = ()=>{
 
 
     const handle1 = ()=>{
-        navigate("/");
+        navigate("/noticeupload");
     }
 
     const handle2 = ()=>{

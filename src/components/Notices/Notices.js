@@ -23,7 +23,7 @@ const Notices = ()=>{
                     return(
                         <div className="post" id={data["_id"]}>
                             <div className="heading">
-                                Admin
+                                {data["creator"]}
                             </div>
                             <div className="subheading">
                                 {getMyDate(data["createdAt"])}

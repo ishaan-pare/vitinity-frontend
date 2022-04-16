@@ -1,0 +1,115 @@
+.noticeform{
+    width: 60%;
+    padding: 2em;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: whitesmoke;
+    margin-top: 100px;
+
+}
+
+.noticeform textarea{
+    width: 100%;
+    height: 200px;
+    font-size: 20px;
+    white-space: pre-wrap;
+
+}
+
+.noticeform input{
+    height: 40px;
+    font-size: 20px;
+}
+
+.noticeform button{
+    margin-top: 60px;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    background-color:#fbb300;
+    border-radius: 2em;
+
+}
+
+.noticeform button:hover{
+
+    background-color:#dfa30d;
+
+}
+
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.noticeform {
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+}
+
+.noticeform:before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		animation: rotate 20s linear infinite;
+}
+	
+.noticeform:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: rgb(241, 239, 239);
+		border-radius: 5px;
+	}
+
+    .show {
+        position: fixed;
+        width: 100%;
+        left: 90%;
+        bottom: 120px;
+        height: 20px;
+        font-size: 3rem;
+        z-index: 1;
+    }
+    .show button{
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        background-color: orangered;
+        border-radius: 10em;
+    
+    
+    
+    
+    }
+    
+    .show button:hover{
+        background-color: rgb(216, 107, 68);
+        cursor: pointer;
+    }

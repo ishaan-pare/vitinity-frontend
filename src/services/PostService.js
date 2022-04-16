@@ -178,6 +178,34 @@ export default {
                     }
                 }
             })
-    }
+    },
+
+    uploadNotice: async (notice) => {
+        return fetch('http://localhost:8000/api/post/notice', {
+            method: "post",
+            body: JSON.stringify(notice),
+            headers: {
+                'Content-Type': "application/json"
+            },
+            credentials: 'include'
+        })
+            .then(res => {
+                if (res.status !== 401) {
+                    return res.json().then(data => data);
+                }
+                else {
+                    return {
+                        message: {
+                            msgBody: "Unauthorized",
+                            msgError: true
+                        }
+                    }
+
+                }
+
+            })
+    },
+
+
 
 }
