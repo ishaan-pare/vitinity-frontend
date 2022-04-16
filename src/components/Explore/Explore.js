@@ -4,11 +4,17 @@ import {AuthContext} from "../../context/AuthContext";
 import {BiUpvote, BiDownvote} from 'react-icons/bi';
 import PostService from "../../services/PostService.js";
 import "./explore.css";
+import AuthService from "../../services/AuthService";
 
 const Explore = ()=>{
 
     const [posts, setPosts] = useState([]);
+    const [admins, setAdmins] = useState([]);
+
     const authContext = useContext(AuthContext);
+
+
+
 
     const getMyDate = (x)=>{
         return "Created on: "+(new Date(x)).getDate()+"/"+((new Date(x)).getMonth()+1)+"/"+(new Date(x)).getFullYear()+" "+(new Date(x)).getHours()+":"+(new Date(x)).getMinutes()+":"+(new Date(x)).getSeconds();
@@ -18,8 +24,12 @@ const Explore = ()=>{
         PostService.getPosts().then((res)=>{
             setPosts(res);     
         });
-        
-    });
+        AuthService.getAllAdmins().then((res)=>{
+            const admins = res.map((data)=>data["regId"]);
+            setAdmins(admins);
+        });
+        console.log(admins);
+    },[admins,posts]);
 
     const handleUpvote = async (id,lis)=>{
 
@@ -50,7 +60,9 @@ const Explore = ()=>{
                     return (
                         <div className="post" id={data["_id"]}>
                             <div className="heading">
-                                {data["creator"]}
+                                {
+                                admins.indexOf(data["registerId"])!==-1?<span style={{"color": "red"}}>{data["creator"]+" (admin)"}</span>:<span>{data["creator"]}</span>
+                                }
                             </div>
                             <div className="subheading">
                                 {data["registerId"]}
