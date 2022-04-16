@@ -58,6 +58,29 @@ export default {
                         }
                     }
             });
+    },
+    getUsersCount: async ()=>{
+        return await fetch('http://localhost:8000/api/user/numuser', {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'get',
+            credentials: 'include'
+        })
+            .then(res=>{
+                if (res.status == 200) {
+                    return res.json().then(data=>data);
+                }
+                else {
+                    return {
+                        message: {
+                            msgBody: "UnAuthorized",
+                            msgError: true
+                        }
+                    }
+                }
+            })
     }
+
 
 }

@@ -18,6 +18,7 @@ const Explore = ()=>{
         PostService.getPosts().then((res)=>{
             setPosts(res);     
         });
+        
     });
 
     const handleUpvote = async (id,lis)=>{

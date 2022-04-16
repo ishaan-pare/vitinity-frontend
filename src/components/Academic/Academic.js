@@ -7,7 +7,7 @@ const Academics = ()=>{
 
 
     const handle1 = ()=>{
-        navigate("/");
+        navigate("/notices");
     }
 
     const handle2 = ()=>{

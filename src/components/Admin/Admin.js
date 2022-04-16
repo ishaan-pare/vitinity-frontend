@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AuthService from "../../services/AuthService.js";
+import PostService from "../../services/PostService.js";
 import "./admin.css"
 
 const Admin = ()=>{
     const navigate = useNavigate();
+    const [n_posts, set_nposts] = useState(0);
+    const [n_notices, set_nnotices] = useState(0);
+    const [n_users, set_nusers] = useState(0);
+
+
+
+    useEffect(()=>{
+        PostService.getNoticesCount().then((res)=>{
+            set_nnotices(res["count"]);
+        })
+        PostService.getPostsCount().then((res)=>{
+            set_nposts(res["count"]);
+        })
+        AuthService.getUsersCount().then((res)=>{
+            set_nusers(res["count"]);
+        })
+    });
 
 
     const handle1 = ()=>{
@@ -29,9 +48,9 @@ const Admin = ()=>{
             <div className="details">
                 <h2>Details</h2>
                 <div className="val">
-                    <span>Total number of Posts posted :10</span><br/>
-                    <span>Total number of User registered  :10</span><br />
-                    <span>Total number of Notice posted  :10</span><br />
+                    <span style={{"color": "darkblue"}}>Total number of Notice posted :<span style={{"color": "purple"}}>{n_notices}</span></span><br/>
+                    <span style={{"color": "darkblue"}}>Total number of User registered  :<span style={{"color": "purple"}}>{n_users}</span></span><br />
+                    <span style={{"color": "darkblue"}}>Total number of Posts posted  :<span style={{"color": "purple"}}>{n_posts}</span></span><br />
                 </div>
             </div>
             <br/>

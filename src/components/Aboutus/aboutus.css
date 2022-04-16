@@ -17,8 +17,13 @@
     padding: 2em;
     width: 80%;
     border-left: #3A3845 solid 6px;
-}
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.2);
 
+}
+.aboutus .post:hover{
+    box-shadow: 0 20px 24px 0 rgba(0,0,0,0.2);
+
+}
 .aboutus .post .heading{
     color: #3A3845;
     font-size: 20px;
