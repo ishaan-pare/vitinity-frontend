@@ -2,15 +2,16 @@
     width: 80%;
     margin: auto;
     margin-top: 100px;
-    border-radius: 2em;
     font-family: 'Courier New', Courier, monospace;
 
 }   
 
 .details{
     padding: .7em;
-    background-color: #e74c3c;
-    border-radius: 2em;
+    background-color: whitesmoke;
+    box-shadow: 0 20px 24px 0 rgba(0,0,0,0.2);
+    
+
 
 }
 .details h2{
@@ -19,11 +20,12 @@
 
 .details .val {
     padding: 2em;
-    background-color: #1abc9c;
+    background-color: white;
     align-items: center;
     text-align: center;
-    border-bottom-left-radius: 2em;
     font-size: 20px;
+    box-shadow: 0 20px 24px 0 rgba(0,0,0,0.2);
+    border-left: solid 10px purple;
 }
 .comp{
     display: flex;

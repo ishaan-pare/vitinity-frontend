@@ -1,10 +1,12 @@
 .val1{
     display: flex;
     padding: 2em;
-    background-color: #1abc9c;
+    background-color: white;
     align-items: center;
     text-align: center;
-    border-bottom-left-radius: 2em;
+    box-shadow: 0 20px 24px 0 rgba(0,0,0,0.2);
+    border-left: solid 10px purple;
+
 }
 .leftval{
     width: 30%;
