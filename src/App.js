@@ -16,6 +16,7 @@ import Notices from "./components/Notices/Notices";
 import Academic from './components/Academic/Academic';
 import Aboutus from "./components/Aboutus/Aboutus";
 import Noticeupload from "./components/Admin/Pages/Noticeupload/Noticeupload";
+import Adduser from "./components/Admin/Pages/Adduser/Adduser";
 
 function App() {
   const [isvis, setIsvis] = useState(false);
@@ -48,8 +49,8 @@ function App() {
           <Route path="/academic" element={<Academic/>}/>
           <Route path="/aboutus" element={<Aboutus/>}/>
           <Route path="/noticeupload" element={<Noticeupload/>}/>
-
-
+          <Route path="/adduser" element={<Adduser/>}/>
+          
         </Routes>
         <Footer show = {isvis}/>
       </Router>

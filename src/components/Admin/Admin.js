@@ -35,7 +35,7 @@ const Admin = ()=>{
     }
 
     const handle3 = ()=>{
-        navigate("/");
+        navigate("/adduser");
         
     }
 

@@ -127,6 +127,28 @@ export default {
             })
     },
 
+    addNewUser: async (user) => {
+        return fetch('http://localhost:8000/api/user/newuser', {
+            method: "post",
+            body: JSON.stringify(user),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            credentials: 'include'
+        }).then(async res => {
+            if (res.status !== 401)
+                return res.json().then(data => data)
+            else
+                return {
+                    isAuthenticated: false,
+                    user: {
+                        username: "",
+                        regId: "",
+                    }
+                }
+        });
+    },
+
 
 
 
