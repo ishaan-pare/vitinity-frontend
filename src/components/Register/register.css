@@ -9,7 +9,7 @@
     margin: auto;
     margin-top: 10%;
     width: 500px;
-    height: 370px;
+    height: fit-content;
     padding: 20px;
     background: #fff;
     border-radius: 5px;

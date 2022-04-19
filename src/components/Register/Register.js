@@ -59,6 +59,9 @@ const Register = (props) => {
                 else {
                     setCode(0);
                     setMessage(message.msgBody);
+                    timerId = setTimeout(() => {
+                        navigate('/aboutus');
+                    }, 2000);
                 }
             });
     }
